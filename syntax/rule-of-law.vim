@@ -10,7 +10,12 @@ syntax keyword rolKeyword
     \ and
     \ or
     \ not
+
+" Wrapped in a case-ignore block, because NULL is case-insensitive in RoL
+syntax case ignore
+syntax keyword rolKeyword
     \ null
+syntax case match
 
 syntax match rolOperator /\v\=\>/
 syntax match rolOperator /\v\<\=\>/
