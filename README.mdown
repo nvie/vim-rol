@@ -2,6 +2,8 @@
 
 A syntax highlighter for [Rule of Law](https://github.com/nvie/rule-of-law) `*.rules` files.
 
+![Example](./example.png)
+
 
 # Installing
 
