@@ -22,8 +22,10 @@ syntax match rolOperator /\v\<\=\>/
 
 syntax keyword rolRuleKeyword
     \ rule
+    \ skip
 
 " Literals
+syntax match rolIdentifier /\v[a-zA-Z_][a-zA-Z0-9_]*/
 syntax match rolNumber /\v\d+(_\d+)*(\.\d+(_\d+)*)?/
 
 " Too simplistic
@@ -38,7 +40,7 @@ syntax match rolCommonError /\v'/
 highlight default link rolComment Comment
 highlight default link rolTodos Todo
 highlight default link rolKeyword Keyword
-highlight default link rolRuleKeyword Keyword
+highlight default link rolRuleKeyword Identifier
 highlight default link rolOperator Type
 
 highlight default link rolNumber Number
