@@ -16,7 +16,8 @@ know!** 🙏
 For now, you'll have to install this Vim plugin like normal, but then still
 also make the following hack:
 
-Create (or edit) the file `~/.vim/filetype.vim` manually:
+Create (or edit) the file `~/.vim/filetype.vim` manually, and put the
+following in there:
 
 ```
 " ------------------------------------------------------------------------
