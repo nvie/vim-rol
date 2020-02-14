@@ -1,3 +1,42 @@
-vim-rol
-=======
+# vim-rule-of-law
+
 A syntax highlighter for [Rule of Law](https://github.com/nvie/rule-of-law) `*.rules` files.
+
+
+# Installing
+
+Install this Vim plugin like you would do for any other one.  In this
+unfortunate case, it seems that Vim already ships with a built-in file type
+detection for `*.rules` files (apparently they're `hog` files).
+
+I'm still figuring out how to best overrule Vim's defaults so it would be
+enough to just install this Vim plugin.  **If you know how, please let me
+know!** 🙏
+
+For now, you'll have to install this Vim plugin like normal, but then still
+also make the following hack:
+
+Create (or edit) the file `~/.vim/filetype.vim`:
+
+```
+" ------------------------------------------------------------------------
+" NOTE: The following hack is necessary to get a change to detect the file
+" type of *.rules files _before_ Vim does it for us (and concludes that
+" they're Hog files).
+"
+" This could be removed once vim-rule-of-law knows how to override this from
+" a plugin.
+
+if exists("did_load_filetypes")
+    finish
+endif
+
+augroup filetypedetect
+
+    " Ignore filetypes for *.rules files
+    autocmd! BufNewFile,BufRead *.rules setfiletype rule-of-law
+
+augroup END
+
+" ------------------------------------------------------------------------
+```
