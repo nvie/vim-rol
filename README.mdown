@@ -2,7 +2,7 @@
 
 A syntax highlighter for [Rule of Law](https://github.com/nvie/rule-of-law) `*.rules` files.
 
-![Example](./example.png)
+<img src="./example.png" alt="Example screenshot" width="697" />
 
 
 # Installing
